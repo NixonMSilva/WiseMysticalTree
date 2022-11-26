@@ -1,46 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Core.ScriptableObjects;
+using Core.ScriptableObjects.Item;
 
-namespace Items
+namespace Core.Items
 {
     public class Item : MonoBehaviour
-
     {
+        [SerializeField] protected ConsumableItemsSO itemSo;
 
-        protected int price;
-        protected int level;
-        protected float magnitude;
+        public ConsumableItemsSO GetItemData() => itemSo;
 
-        public int GetPrice()
-        {
-            return price;
-        }
-
-        private void Equip()
+        private void Equip ()
         {
 
         }
 
-        private void Desquip()
+        private void Unequip ()
         {
 
         }
 
-        private void Discard()
+        private void Discard ()
         {
 
         }
 
-        private void Sell()
-        {
-
-        }
-        void Start()
-        {
-
-        }
-        void Update()
+        private void Sell ()
         {
 
         }

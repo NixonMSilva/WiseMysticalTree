@@ -1,3 +1,4 @@
+using Core.Enums;
 using UnityEngine;
 
 namespace Core.ScriptableObjects.Item
@@ -5,7 +6,7 @@ namespace Core.ScriptableObjects.Item
 
     [CreateAssetMenu(fileName = "Itens", menuName = "Item/New Consumable")]
 
-    public class ConsumableItensSO : GeneralItensSO
+    public class ConsumableItemsSO : GeneralItemsSO
     {
         [Header("Consumable information")]
         [Space]
@@ -22,7 +23,7 @@ namespace Core.ScriptableObjects.Item
         /// <summary>
         /// Tipos de consumiveis definidos em Consumables.cs
         /// </summary>
-        //public ConsumableType type;
+        public ConsumableType type;
 
     }
 }

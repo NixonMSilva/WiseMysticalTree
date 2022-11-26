@@ -3,29 +3,24 @@ using UnityEngine;
 namespace Core.ScriptableObjects.Item
 {
 
-    [CreateAssetMenu(fileName = "Itens", menuName = "Item/New General Item")]
+    [CreateAssetMenu(fileName = "New Item", menuName = "Item/New General Item")]
 
-    public class GeneralItensSO : ScriptableObject
+    public class GeneralItemsSO : ScriptableObject
     {
         /// <summary>
         /// Identificador de item unico, caso seja nescess�rio identificar itens especificos para utiliza��o em puzzles, quests, etc
         /// </summary>
         public int id;
-        
+
         /// <summary>
         /// Pre�o unitario do item
         /// </summary>
         public int price;
 
         /// <summary>
-        /// Quantidade de unidades do item
-        /// </summary>
-        public int amount;
-
-        /// <summary>
         /// Nome do Item 
         /// </summary>
-        public string ItemName;
+        public string itemName;
 
         /// <summary>
         /// Descri��o do item

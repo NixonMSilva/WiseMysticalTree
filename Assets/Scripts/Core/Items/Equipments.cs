@@ -1,28 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Items;
 
-public enum EquipmentType {Armor,Shield,Weapon};
-
-public class Equipments : Item
+namespace Core.Items
 {
-    private EquipmentType type;
-    private float durability;
-    private float dodgeChance;
-
-    private void Broken()
+    public class Equipments : Item
     {
+        private void Break ()
+        {
 
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
+        }
     }
 }

@@ -24,18 +24,18 @@ namespace Entity
         
         
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             
         }
 
-//----------- Stamina Methods ----------------
+        #region StaminaMethods
 
         // checks if it has Stamina at all
         public abstract bool HasStamina();
@@ -51,9 +51,10 @@ namespace Entity
 
         // updates Stamina value increasing a value per time
         public abstract void StaminaRecovery();
+        
+        #endregion
 
-
-//----------- Health n death Methods -----------------
+        #region HealthMethods
 
         // Checks if it is alive
         public abstract bool IsAlive();
@@ -70,8 +71,10 @@ namespace Entity
         // Kills it
         public abstract void KillEntity();
 
-
-//---------------- Gets n Sets ---------------------------------------
+        #endregion
+        
+        #region Getter&Setters
+        
         // Max Health
         public float GetMaxHealth(){
             return MaxHealth;
@@ -143,7 +146,8 @@ namespace Entity
         public void SetMysticism(float newMysticism){
             this.Mysticism = newMysticism;
         }
-// --------------------------------------------------------------------
+        
+        #endregion
     }
 }
 
