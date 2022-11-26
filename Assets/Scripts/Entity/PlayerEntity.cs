@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Core.ScriptableObjects.Gameplay;
 using UnityEngine;
 
 namespace Entity
@@ -10,7 +11,8 @@ namespace Entity
         [SerializeField] private float _experience;
         [SerializeField] private float _xpToTheNextLVL;
         [SerializeField] private int _level;
-        [SerializeField] private List<float> _levelUpXpList;
+
+        [SerializeField] private LevelUpTable _xpTable;
         /* list to hold xp to the next lvl 
         |------------ example list--------------|
         | LVL |  XP   |
@@ -40,7 +42,7 @@ namespace Entity
         public void LevelUP(){
             this._level++;
             this._experience = 0;
-            this._xpToTheNextLVL = _levelUpXpList[_level];
+            this._xpToTheNextLVL = _xpTable.table[(_level - 1)].xpNeeded;
         }
 
         public bool CheckIfLevelUp(){
@@ -188,6 +190,8 @@ namespace Entity
         public void SetLevel(int newLevel){
             this._level = newLevel;
         }
+
+        public LevelUpTable GetXPTable() => _xpTable;
 
     }
 }
