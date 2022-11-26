@@ -8,19 +8,19 @@ namespace Entity
     public abstract class Entity : MonoBehaviour
     {
         [Header("Health Settings")]
-        [SerializeField] protected float _maxHealth;
-        [SerializeField] protected float _health;
+        [SerializeField] protected float MaxHealth;
+        [SerializeField] protected float Health;
 
         [Header("Stamina Settings")]
-        [SerializeField] protected float _maxStamina;
-        [SerializeField] protected float _stamina;
-        [SerializeField] protected float _staminaRecoverPerTime;
+        [SerializeField] protected float MaxStamina;
+        [SerializeField] protected float Stamina;
+        [SerializeField] protected float StaminaRecoverPerTime;
 
         [Header("Attributes")]
-        [SerializeField] protected float _strenght;
-        [SerializeField] protected float _defense;
-        [SerializeField] protected float _agility;
-        [SerializeField] protected float _mysticism;
+        [SerializeField] protected float Strenght;
+        [SerializeField] protected float Defense;
+        [SerializeField] protected float Agility;
+        [SerializeField] protected float Mysticism;
         
         
         // Start is called before the first frame update
@@ -74,74 +74,74 @@ namespace Entity
 //---------------- Gets n Sets ---------------------------------------
         // Max Health
         public float GetMaxHealth(){
-            return _maxHealth;
+            return MaxHealth;
         }
         public void SetMaxHealth(float newMaxHealth){
-            this._maxHealth = newMaxHealth;
+            this.MaxHealth = newMaxHealth;
         }
 
         // Health
         public float GetHealth(){
-            return _health;
+            return Health;
         }
         public void SetHealth(float newHealth){
-            this._health = newHealth;
+            this.Health = newHealth;
         }
 
         // Max Stamina
         public float GetMaxStamina(){
-            return _maxStamina;
+            return MaxStamina;
         }
         public void SetMaxStamina(float newMaxStamina){
-            this._maxStamina = newMaxStamina;
+            this.MaxStamina = newMaxStamina;
         }
 
         // Stamina
         public float GetStamina(){
-            return _stamina;
+            return Stamina;
         }
         public void SetStamina(float newStamina){
-            this._stamina = newStamina;
+            this.Stamina = newStamina;
         }
 
         // Stamina Recover Per Time
         public float GetStaminaRecoverPerTime(){
-            return _staminaRecoverPerTime;
+            return StaminaRecoverPerTime;
         }
         public void SetStaminaRecoverPerTime(float newStaminaRecoverPerTime){
-            this._staminaRecoverPerTime = newStaminaRecoverPerTime;
+            this.StaminaRecoverPerTime = newStaminaRecoverPerTime;
         }
 
         // Strengh
         public float GetStrenght(){
-            return _strenght;
+            return Strenght;
         }
         public void SetStrenght(float newStrenght){
-            this._strenght = newStrenght;
+            this.Strenght = newStrenght;
         }
 
         // Defense
         public float GetDefense(){
-            return _defense;
+            return Defense;
         }
         public void SetDefense(float newDefense){
-            this._defense = newDefense;
+            this.Defense = newDefense;
         }
 
         //Agility
         public float GetAgility(){
-            return _agility;
+            return Agility;
         }
         public void SetAgility(float newAgility){
-            this._agility = newAgility;
+            this.Agility = newAgility;
         }
 
         //Mysticism
         public float GetMysticism(){
-            return _mysticism;
+            return Mysticism;
         }
         public void SetMysticism(float newMysticism){
-            this._mysticism = newMysticism;
+            this.Mysticism = newMysticism;
         }
 // --------------------------------------------------------------------
     }
