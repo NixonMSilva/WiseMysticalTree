@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Core.ScriptableObjects.Entities;
 
 namespace Entity
 {
@@ -21,6 +21,9 @@ namespace Entity
         [SerializeField] protected float Defense;
         [SerializeField] protected float Agility;
         [SerializeField] protected float Mysticism;
+
+        [Header("Object Data")] 
+        [SerializeField] protected EntitySO EntityData;
         
         
         // Start is called before the first frame update
@@ -145,6 +148,11 @@ namespace Entity
         }
         public void SetMysticism(float newMysticism){
             this.Mysticism = newMysticism;
+        }
+
+        public EntitySO GetData()
+        {
+            return EntityData;
         }
         
         #endregion
